@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Stock</string>
+
+    <string name="deal_num">交易次数:</string>
+    <string name="win_rate">胜率:</string>
+    <string name="max_loss">最大亏损:</string>
+    <string name="comprehensive_rate">综合盈率:</string>
+    <string name="join_time">加入时间:</string>
+
+    <string name="wallet">钱包</string>
+    <string name="integral">积分</string>
+    <string name="my_documentary">我的跟单</string>
+    <string name="my_taxation">我的报单</string>
+    <string name="recommended_prize">推荐有奖</string>
+    <string name="integral_mall">积分商城</string>
+    <string name="service_center">服务中心</string>
+</resources>
