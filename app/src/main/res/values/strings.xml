@@ -14,4 +14,7 @@
     <string name="recommended_prize">推荐有奖</string>
     <string name="integral_mall">积分商城</string>
     <string name="service_center">服务中心</string>
+
+    <string name="refresh">下拉刷新...</string>
+    <string name="load_more">上拉加载...</string>
 </resources>

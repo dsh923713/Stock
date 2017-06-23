@@ -63,9 +63,11 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
+                    android:id="@+id/rl_wallet"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/white_to_grey"
                     android:padding="5dp">
 
                     <TextView
@@ -93,9 +95,11 @@
                     android:background="@color/line_color"/>
 
                 <RelativeLayout
+                    android:id="@+id/rl_integral"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/white_to_grey"
                     android:padding="5dp">
 
                     <TextView
@@ -124,30 +128,40 @@
                 android:background="@color/line_color"/>
 
             <com.allen.library.SuperTextView
+                android:id="@+id/stv_my_documentary"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                app:sUseRipple="true"
                 app:sLeftIconRes="@mipmap/ic_my_documentary"
                 app:sLeftTextString="@string/my_documentary"/>
 
             <com.allen.library.SuperTextView
+                android:id="@+id/stv_my_taxation"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                app:sUseRipple="true"
                 app:sLeftIconRes="@mipmap/ic_my_taxation"
                 app:sLeftTextString="@string/my_taxation"/>
 
             <com.allen.library.SuperTextView
+                android:id="@+id/stv_prize"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                app:sUseRipple="true"
                 app:sLeftIconRes="@mipmap/ic_prize"
                 app:sLeftTextString="@string/recommended_prize"/>
 
             <com.allen.library.SuperTextView
+                android:id="@+id/stv_integral_mall"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                app:sUseRipple="true"
                 app:sLeftIconRes="@mipmap/ic_integral_mall"
                 app:sLeftTextString="@string/integral_mall"/>
 
             <com.allen.library.SuperTextView
+                android:id="@+id/stv_service"
+                app:sUseRipple="true"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 app:sLeftIconRes="@mipmap/ic_service"
