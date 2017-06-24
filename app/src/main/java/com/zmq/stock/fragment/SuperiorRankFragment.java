@@ -73,6 +73,9 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
         data.add(new SuperiorRankBean(R.mipmap.xiaohei, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
         data.add(new SuperiorRankBean(R.mipmap.xiaohei, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
         data.add(new SuperiorRankBean(R.mipmap.renma, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
+        data.add(new SuperiorRankBean(R.mipmap.renma, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
+        data.add(new SuperiorRankBean(R.mipmap.renma, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
+        data.add(new SuperiorRankBean(R.mipmap.renma, "瓦萨其", 100, 88.0, 500, 80, System.currentTimeMillis()));
     }
 
     /**
