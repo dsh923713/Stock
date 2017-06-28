@@ -17,4 +17,21 @@
 
     <string name="refresh">下拉刷新...</string>
     <string name="load_more">上拉加载...</string>
+    
+    <string name="taxation">报单</string>
+    <string name="futures">期货</string>
+    <string name="stock_code">股票代码</string>
+    <string name="stock_name">股票名称</string>
+    <string name="futures_name">期货名称</string>
+    <string name="search">查询</string>
+    <string name="price">价格</string>
+    <string name="shipping_space">仓位</string>
+    <string name="sure">确定</string>
+    <string name="taxation_price_hint">提示：当价格到达指定价位，此次报单才生效，否则无效。</string>
+    <string name="name">名称</string>
+    <string name="news">最新</string>
+    <string name="ups_and_downs">涨跌</string>
+    <string name="today_ing">日增仓</string>
+    <string name="direction">方向</string>
+
 </resources>

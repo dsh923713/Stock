@@ -57,6 +57,7 @@ public class HomeActivity extends BaseActivity {
                     case 0:
                         setTitle("高手排行");
                         tv_right.setVisibility(View.GONE);
+                        toolbar.setVisibility(View.VISIBLE);
                         StatusBarUtil.setColorNoTranslucent(HomeActivity.this, ContextCompat.getColor(HomeActivity.this, R
                                 .color.blue));
                         toolbar.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.blue));
@@ -64,19 +65,22 @@ public class HomeActivity extends BaseActivity {
                     case 1:
                         setTitle("报单中心");
                         tv_right.setVisibility(View.GONE);
+                        toolbar.setVisibility(View.GONE);
                         StatusBarUtil.setColorNoTranslucent(HomeActivity.this, ContextCompat.getColor(HomeActivity.this, R
-                                .color.colorAccent));
-                        toolbar.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.colorAccent));
+                                .color.t4a4a4a));
+//                        toolbar.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.colorAccent));
                         break;
                     case 2:
                         setTitle("购买详情");
                         tv_right.setVisibility(View.GONE);
+                        toolbar.setVisibility(View.VISIBLE);
                         StatusBarUtil.setColorNoTranslucent(HomeActivity.this, ContextCompat.getColor(HomeActivity.this, R
                                 .color.black));
                         toolbar.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.black));
                         break;
                     default:
                         setTitle("个人中心");
+                        toolbar.setVisibility(View.VISIBLE);
                         setRightIcon(R.mipmap.ic_set, "", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

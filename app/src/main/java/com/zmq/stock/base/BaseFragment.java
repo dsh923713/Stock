@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zmq.stock.R;
 import com.zmq.stock.utils.ToastUtils;
 
 import butterknife.ButterKnife;
@@ -166,9 +165,9 @@ public abstract class BaseFragment extends Fragment {
     public void replaceFragment(int resId, Fragment fragment) {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         FragmentTransaction beginTransaction = fragmentManager.beginTransaction();
-        beginTransaction.setCustomAnimations(R.anim.right_in, R.anim.left_out, R.anim.left_in, R.anim.right_out);
+//        beginTransaction.setCustomAnimations(R.anim.right_in, R.anim.left_out, R.anim.left_in, R.anim.right_out);
         beginTransaction.replace(resId, fragment);
-        beginTransaction.addToBackStack(null);
+//        beginTransaction.addToBackStack(null);
         beginTransaction.commitAllowingStateLoss();
     }
 

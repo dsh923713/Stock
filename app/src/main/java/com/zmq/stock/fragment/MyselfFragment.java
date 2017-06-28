@@ -1,5 +1,6 @@
 package com.zmq.stock.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,12 +10,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.allen.library.SuperTextView;
+import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.zmq.stock.R;
 import com.zmq.stock.base.BaseFragment;
 
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
+import me.nereo.multi_image_selector.MultiImageSelector;
+import me.nereo.multi_image_selector.MultiImageSelectorActivity;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * Created by Administrator on 2017/6/22.
@@ -48,6 +56,8 @@ public class MyselfFragment extends BaseFragment {
     @BindView(R.id.stv_service)
     SuperTextView stvService; //服务中心
 
+    private final static int REQUEST_IMAGE = 1001;
+
     /**
      * 单例模式
      *
@@ -76,6 +86,7 @@ public class MyselfFragment extends BaseFragment {
     void onClick(View v) {
         switch (v.getId()) {
             case R.id.riv_icon: //头像
+                MultiImageSelector.create().showCamera(true).count(9).single().start(this, REQUEST_IMAGE);
                 break;
             case R.id.rl_wallet: //钱包
                 break;
@@ -93,6 +104,25 @@ public class MyselfFragment extends BaseFragment {
                 break;
             default:
                 break;
+        }
+    }
+
+
+    /**
+     *
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE) {
+            if (resultCode == RESULT_OK) {
+                // 获取返回的图片列表
+                List<String> path = data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT);
+                Glide.with(activity).load(path.get(0)).into(rivIcon); //显示选中的图片
+            }
         }
     }
 }

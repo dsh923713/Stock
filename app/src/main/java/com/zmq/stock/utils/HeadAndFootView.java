@@ -1,6 +1,7 @@
 package com.zmq.stock.utils;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ public class HeadAndFootView {
 
     public static View getHeadView(Context context) {
         if (headView == null) {
-            headView = View.inflate(context, R.layout.rv_head_refresh, null);
+            headView = LayoutInflater.from(context).inflate(R.layout.rv_head_refresh, null);
             tvHead = (TextView) headView.findViewById(R.id.tv_head_name);
             ivHead = (ImageView) headView.findViewById(R.id.iv_head);
 
@@ -30,7 +31,7 @@ public class HeadAndFootView {
     }
     public static View getFootView(Context context) {
         if (footView == null) {
-            footView = View.inflate(context, R.layout.rv_foot_loadmore, null);
+            footView = LayoutInflater.from(context).inflate(R.layout.rv_foot_loadmore, null);
             tvFoot = (TextView) footView.findViewById(R.id.tv_foot_name);
             ivFoot = (ImageView) footView.findViewById(R.id.iv_foot);
         }
