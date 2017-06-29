@@ -30,8 +30,6 @@ dependencies {
 
     //轮播图
     compile 'com.youth.banner:banner:1.4.9'  //最新版本
-    //底部导航栏
-    compile 'com.jpeng:JPTabBar:1.2.3'
     //butterknife注解
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'

@@ -63,8 +63,8 @@ public class HomeActivity extends BaseActivity {
                         toolbar.setBackgroundColor(ContextCompat.getColor(HomeActivity.this, R.color.blue));
                         break;
                     case 1:
-                        setTitle("报单中心");
-                        tv_right.setVisibility(View.GONE);
+//                        setTitle("报单中心");
+//                        tv_right.setVisibility(View.GONE);
                         toolbar.setVisibility(View.GONE);
                         StatusBarUtil.setColorNoTranslucent(HomeActivity.this, ContextCompat.getColor(HomeActivity.this, R
                                 .color.t4a4a4a));

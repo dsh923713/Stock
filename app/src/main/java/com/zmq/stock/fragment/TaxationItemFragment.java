@@ -86,6 +86,13 @@ public class TaxationItemFragment extends BaseFragment {
     protected void initView(View view) {
         tvSure.setClickable(false);
         tvTaxationSearch.setClickable(false);
+        setEtTextChange();
+    }
+
+    /**
+     * 设置editview的文本长度监听
+     */
+    private void setEtTextChange() {
         etStockCode.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -102,6 +109,24 @@ public class TaxationItemFragment extends BaseFragment {
                     tvTaxationSearch.setClickable(false);
                     tvTaxationSearch.setTextColor(ContextCompat.getColor(activity, R.color.grey));
                     tvTaxationSearch.setBackgroundResource(R.drawable.taxation_line_grey_shape);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        etPrice.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() < 1){
+                    etPrice.setText("0.00");
                 }
             }
 
@@ -127,10 +152,12 @@ public class TaxationItemFragment extends BaseFragment {
                     price--;
                 }
                 etPrice.setText(String.format("%.2f", price) + "");
+                etPrice.setSelection(etPrice.length());
                 break;
             case R.id.ib_add: //加
                 price++;
                 etPrice.setText(String.format("%.2f", price) + "");
+                etPrice.setSelection(etPrice.length());
                 break;
             case R.id.cb_one_tenth: //十分之一
                 cbOneFifth.setChecked(false);

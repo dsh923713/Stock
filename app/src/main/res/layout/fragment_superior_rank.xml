@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
+
     <com.github.nuptboyzhb.lib.SuperSwipeRefreshLayout
         android:id="@+id/ssrl_surperior_rank"
         android:layout_width="match_parent"

@@ -7,16 +7,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/t4a4a4a"
-        android:orientation="horizontal"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_taxation"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
@@ -35,13 +33,14 @@
 
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
             android:background="@color/line_color"/>
 
         <LinearLayout
             android:id="@+id/ll_futures"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 

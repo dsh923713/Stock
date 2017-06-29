@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_taxation_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="大城市123"
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_taxation_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="6521"
+            android:textColor="@color/t29d454"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_ups_and_downs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="-521"
+            android:textColor="@color/t29d454"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_today_ing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:text="24514"
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"/>
+</LinearLayout>

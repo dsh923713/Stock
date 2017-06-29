@@ -21,36 +21,39 @@
                 android:layout_weight="1"
                 android:text="@string/name"
                 android:textColor="@color/gary"
-                android:textSize="13sp"/>
+                android:textSize="12sp"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:text="@string/news"
+                android:text="@string/max_new"
                 android:textColor="@color/gary"
-                android:textSize="13sp"/>
+                android:textSize="12sp"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawablePadding="3dp"
                 android:drawableRight="@mipmap/ic_arrow"
                 android:gravity="right"
                 android:text="@string/ups_and_downs"
                 android:textColor="@color/gary"
-                android:textSize="13sp"/>
+                android:textSize="12sp"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawablePadding="3dp"
                 android:drawableRight="@mipmap/ic_arrow"
                 android:gravity="right"
                 android:text="@string/today_ing"
+                android:layout_marginRight="5dp"
                 android:textColor="@color/gary"
-                android:textSize="13sp"/>
+                android:textSize="12sp"/>
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
@@ -64,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -83,7 +87,7 @@
                     android:textSize="13sp"/>
 
                 <EditText
-                    android:id="@+id/et_stock_code"
+                    android:id="@+id/et_futures_name"
                     style="?android:attr/textViewStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -92,20 +96,14 @@
                     android:background="@null"
                     android:gravity="right"
                     android:hint="请输入要查询的期货名称"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:textColor="@color/black"
                     android:textSize="13sp"/>
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/line_color"/>
 
             <TextView
-                android:id="@+id/tv_taxation_search"
+                android:id="@+id/tv_futures_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -119,37 +117,6 @@
                 android:text="@string/search"
                 android:textColor="@color/grey"
                 android:textSize="13sp"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@mipmap/ic_stock_card"
-                    android:drawablePadding="8dp"
-                    android:text="@string/stock_name"
-                    android:textColor="@color/t313131"
-                    android:textSize="13sp"/>
-
-                <TextView
-                    android:id="@+id/tv_stock_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="厦门港务"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"/>
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/line_color"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -220,13 +187,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:drawableLeft="@mipmap/ic_price"
+                    android:drawableLeft="@mipmap/ic_direction"
                     android:drawablePadding="8dp"
                     android:text="@string/direction"
                     android:textColor="@color/t313131"
                     android:textSize="13sp"/>
 
                 <RadioGroup
+                    android:id="@+id/rg_direction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -407,6 +375,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
                 android:background="@color/grey"
                 android:gravity="center|top"
                 android:paddingTop="10dp"

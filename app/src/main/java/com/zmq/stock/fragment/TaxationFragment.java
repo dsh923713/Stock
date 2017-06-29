@@ -55,9 +55,11 @@ public class TaxationFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-        rbTaxation.setChecked(true);
+        rbTaxation.setChecked(true);//默认选中报单
         replaceFragment(R.id.fl_taxation_content, TaxationItemFragment.getInstance());//默认显示报单
     }
+
+
     @OnClick({R.id.ll_taxation,R.id.ll_futures,R.id.rb_taxation,R.id.rb_futures})
     void onClick(View v){
         switch (v.getId()){

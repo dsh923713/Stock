@@ -29,7 +29,7 @@
     <string name="sure">确定</string>
     <string name="taxation_price_hint">提示：当价格到达指定价位，此次报单才生效，否则无效。</string>
     <string name="name">名称</string>
-    <string name="news">最新</string>
+    <string name="max_new">最新</string>
     <string name="ups_and_downs">涨跌</string>
     <string name="today_ing">日增仓</string>
     <string name="direction">方向</string>
