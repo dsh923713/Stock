@@ -224,7 +224,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void replaceFragment(int resId, Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction beginTransaction = fragmentManager.beginTransaction();
-        beginTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//        beginTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         beginTransaction.replace(resId, fragment);
         beginTransaction.commit();
     }

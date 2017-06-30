@@ -7,6 +7,9 @@
     <string name="comprehensive_rate">综合盈率:</string>
     <string name="join_time">加入时间:</string>
 
+    <string name="superior_rank">高手排行</string>
+    <string name="buy_detail">购买详情</string>
+    <string name="person_center">个人中心</string>
     <string name="wallet">钱包</string>
     <string name="integral">积分</string>
     <string name="my_documentary">我的跟单</string>

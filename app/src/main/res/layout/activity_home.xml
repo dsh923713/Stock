@@ -8,6 +8,61 @@
 
     <include layout="@layout/toolbar_title"/>
 
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/t4a4a4a"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_taxation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rb_taxation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/taxation_selected"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/taxation"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_futures"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rb_futures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/futures_selected"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/futures"
+                android:textColor="@color/gary"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="match_parent"

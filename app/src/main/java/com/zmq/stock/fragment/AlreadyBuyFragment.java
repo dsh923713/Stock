@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.zmq.stock.R;
 import com.zmq.stock.base.BaseFragment;
 
 /**
@@ -30,7 +31,8 @@ public class AlreadyBuyFragment extends BaseFragment {
 
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return null;
+        view = inflater.inflate(R.layout.fragment_already_buy, container, false);
+        return view;
     }
 
     @Override
