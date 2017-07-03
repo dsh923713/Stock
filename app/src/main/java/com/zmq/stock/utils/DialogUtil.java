@@ -1,12 +1,16 @@
 package com.zmq.stock.utils;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.zmq.stock.R;
 
 
 public class DialogUtil {
@@ -127,22 +131,22 @@ public class DialogUtil {
         return dialog;
     }
 
-//    public static ProgressDialog getProgressDialog(Context context, String msg) {
-//        return getProgressDialog(context, msg, true);//true表示可以按返回键取消dialog
-//    }
+    public static ProgressDialog getProgressDialog(Context context, String msg) {
+        return getProgressDialog(context, msg, true);//true表示可以按返回键取消dialog
+    }
 
-//    public static ProgressDialog getProgressDialog(Context context, String msg, boolean isCancelable) {
-//        ProgressDialog progressDialog = null;//, R.style.MyProgressDialog
-//        if (Build.VERSION.SDK_INT > 21) {
-//            progressDialog = new ProgressDialog(context, R.style.MyProgressDialog_5);
-//        } else {
-//            progressDialog = new ProgressDialog(context, R.style.MyProgressDialog);
-//        }
-//        progressDialog.setIndeterminate(false);
-//        progressDialog.setMessage(msg);
-//        progressDialog.setCanceledOnTouchOutside(false);
-//        progressDialog.setCancelable(isCancelable);
-//        progressDialog.setProgressNumberFormat("%1dMB/%2dMB");
-//        return progressDialog;
-//    }
+    public static ProgressDialog getProgressDialog(Context context, String msg, boolean isCancelable) {
+        ProgressDialog progressDialog = null;//, R.style.MyProgressDialog
+        if (Build.VERSION.SDK_INT > 21) {
+            progressDialog = new ProgressDialog(context, R.style.MyProgressDialog_5);
+        } else {
+            progressDialog = new ProgressDialog(context, R.style.MyProgressDialog);
+        }
+        progressDialog.setIndeterminate(false);
+        progressDialog.setMessage(msg);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(isCancelable);
+        progressDialog.setProgressNumberFormat("%1dMB/%2dMB");
+        return progressDialog;
+    }
 }

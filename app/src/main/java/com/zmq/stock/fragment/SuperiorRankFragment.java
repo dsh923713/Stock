@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.github.nuptboyzhb.lib.SuperSwipeRefreshLayout;
 import com.zmq.stock.R;
+import com.zmq.stock.activity.PersonInformationActivity;
 import com.zmq.stock.adapter.SuperiorRankAdapter;
 import com.zmq.stock.base.BaseFragment;
 import com.zmq.stock.bean.SuperiorRankBean;
@@ -30,11 +32,15 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
     private static SuperiorRankFragment superiorRankFragment;
 
     @BindView(R.id.rv_surperior_rank)
-    RecyclerView rvSurperiorRank;
+    RecyclerView rvSurperiorRank; //排行列表
     @BindView(R.id.ssrl_surperior_rank)
-    SuperSwipeRefreshLayout ssrlSurperiorRank;
+    SuperSwipeRefreshLayout ssrlSurperiorRank; //上下拉刷新加载
 
-    private List<SuperiorRankBean> data;
+    private List<SuperiorRankBean> data; //模拟数据
+
+    public static final int SPUERIORID = 1;
+    private SuperiorRankAdapter rankAdapter;
+    private HeadAndFootView headAndFootView;
 
     /**
      * 单例模式
@@ -56,13 +62,21 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
 
     @Override
     protected void initView(View view) {
-        ssrlSurperiorRank.setHeaderView(HeadAndFootView.getHeadView(activity));
-        ssrlSurperiorRank.setFooterView(HeadAndFootView.getFootView(activity));
+        headAndFootView = new HeadAndFootView();
+        ssrlSurperiorRank.setHeaderView(headAndFootView.getHeadView(activity));
+        ssrlSurperiorRank.setFooterView(headAndFootView.getFootView(activity));
         setSuperiorRankBean();
         rvSurperiorRank.setLayoutManager(new LinearLayoutManager(activity));
-        rvSurperiorRank.setAdapter(new SuperiorRankAdapter(data));
+        rankAdapter = new SuperiorRankAdapter(data, SPUERIORID);
+        rvSurperiorRank.setAdapter(rankAdapter);
         ssrlSurperiorRank.setOnPullRefreshListener(this);
         ssrlSurperiorRank.setOnPushLoadMoreListener(this);
+        rankAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(PersonInformationActivity.class);
+            }
+        });
     }
 
     private void setSuperiorRankBean() {
@@ -83,7 +97,7 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
      */
     @Override
     public void onRefresh() {
-        HeadAndFootView.getTvHead().setText("正在刷新...");
+        headAndFootView.getTvHead().setText("正在刷新...");
         ssrlSurperiorRank.setRefreshing(false);
     }
 
@@ -94,13 +108,13 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
 
     @Override
     public void onPullEnable(boolean b) {
-        HeadAndFootView.getTvHead().setText(b ? "松开刷新" : "下拉刷新");
-        HeadAndFootView.getIvHead().setImageResource(b ? R.mipmap.ic_refresh_up : R.mipmap.ic_refresh_down);
+        headAndFootView.getTvHead().setText(b ? "松开刷新" : "下拉刷新");
+        headAndFootView.getIvHead().setImageResource(b ? R.mipmap.ic_refresh_up : R.mipmap.ic_refresh_down);
     }
 
     @Override
     public void onLoadMore() {
-        HeadAndFootView.getTvFoot().setText("加载中...");
+        headAndFootView.getTvFoot().setText("加载中...");
         ssrlSurperiorRank.setLoadMore(false);
     }
 
@@ -111,7 +125,7 @@ public class SuperiorRankFragment extends BaseFragment implements SuperSwipeRefr
 
     @Override
     public void onPushEnable(boolean b) {
-        HeadAndFootView.getTvFoot().setText(b ? "松开加载" : "上拉加载");
-        HeadAndFootView.getIvFoot().setImageResource(b ? R.mipmap.ic_refresh_down : R.mipmap.ic_refresh_up);
+        headAndFootView.getTvFoot().setText(b ? "松开加载" : "上拉加载");
+        headAndFootView.getIvFoot().setImageResource(b ? R.mipmap.ic_refresh_down : R.mipmap.ic_refresh_up);
     }
 }

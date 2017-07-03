@@ -13,14 +13,14 @@ import com.zmq.stock.R;
  */
 
 public class HeadAndFootView {
-    private static View headView;
-    private static View footView;
-    private static TextView tvHead;
-    private static ImageView ivHead;
-    private static TextView tvFoot;
-    private static ImageView ivFoot;
+    private View headView;
+    private View footView;
+    private TextView tvHead;
+    private ImageView ivHead;
+    private TextView tvFoot;
+    private ImageView ivFoot;
 
-    public static View getHeadView(Context context) {
+    public View getHeadView(Context context) {
         if (headView == null) {
             headView = LayoutInflater.from(context).inflate(R.layout.rv_head_refresh, null);
             tvHead = (TextView) headView.findViewById(R.id.tv_head_name);
@@ -29,7 +29,8 @@ public class HeadAndFootView {
         }
         return headView;
     }
-    public static View getFootView(Context context) {
+
+    public View getFootView(Context context) {
         if (footView == null) {
             footView = LayoutInflater.from(context).inflate(R.layout.rv_foot_loadmore, null);
             tvFoot = (TextView) footView.findViewById(R.id.tv_foot_name);
@@ -38,19 +39,19 @@ public class HeadAndFootView {
         return footView;
     }
 
-    public static TextView getTvHead() {
+    public TextView getTvHead() {
         return tvHead;
     }
 
-    public static ImageView getIvHead() {
+    public ImageView getIvHead() {
         return ivHead;
     }
 
-    public static TextView getTvFoot() {
+    public TextView getTvFoot() {
         return tvFoot;
     }
 
-    public static ImageView getIvFoot() {
+    public ImageView getIvFoot() {
         return ivFoot;
     }
 }

@@ -6,6 +6,7 @@
     <string name="max_loss">最大亏损:</string>
     <string name="comprehensive_rate">综合盈率:</string>
     <string name="join_time">加入时间:</string>
+    <string name="buy_time">购买时间:</string>
 
     <string name="superior_rank">高手排行</string>
     <string name="buy_detail">购买详情</string>
@@ -36,5 +37,8 @@
     <string name="ups_and_downs">涨跌</string>
     <string name="today_ing">日增仓</string>
     <string name="direction">方向</string>
-
+    
+    <string name="hot">热度</string>
+    <string name="fans">粉丝</string>
+    <string name="follow">+关注</string>
 </resources>

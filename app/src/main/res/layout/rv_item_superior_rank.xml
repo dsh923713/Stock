@@ -9,10 +9,11 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/riv_icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginRight="5dp"
         android:adjustViewBounds="true"
+        android:layout_gravity="top"
         android:src="@mipmap/xiaohei"
         app:riv_oval="false"/>
 
@@ -82,6 +83,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tv_max_loss"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="3dp"
             android:text="@string/join_time"
             android:textColor="@color/gary"
             android:textSize="12sp"/>

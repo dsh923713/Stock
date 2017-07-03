@@ -38,6 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(resId);
+        initContentView(savedInstanceState);
         Bundle extras = getIntent().getExtras();
         if (null != extras) {
             getBundleExtras(extras);
@@ -52,7 +53,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
-        initContentView(savedInstanceState);
         unbinder = ButterKnife.bind(this); //绑定注解
         initView();
     }

@@ -44,6 +44,10 @@ public class TaxationFragment extends BaseFragment {
         mActivity.rbTaxation.setChecked(true);//默认选中报单
     }
 
+    /**
+     * 重新父类的onAttach 获取当前的activity
+     * @param context
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

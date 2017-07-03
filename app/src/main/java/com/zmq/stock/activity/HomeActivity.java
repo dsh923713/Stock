@@ -33,16 +33,16 @@ public class HomeActivity extends BaseActivity {
     @BindView(R.id.rb_taxation)
     public RadioButton rbTaxation; //报单
     @BindView(R.id.ll_taxation)
-    public LinearLayout llTaxation; //报单
+    LinearLayout llTaxation; //报单
     @BindView(R.id.rb_futures)
-    public RadioButton rbFutures; //期货
+    RadioButton rbFutures; //期货
     @BindView(R.id.ll_futures)
-    public LinearLayout llFutures; //期货
+    LinearLayout llFutures; //期货
 
     private String[] mTitles = {"高手排行", "报单", "已购买", "我的"};
     private int[] mIconUnselectIds = {R.mipmap.ic_rank_normal, R.mipmap.ic_taxation_normal, R.mipmap.ic_buy_normal, R.mipmap
-            .ic_myself_normal};
-    private int[] mIconSelectIds = {R.mipmap.ic_rank, R.mipmap.ic_taxation, R.mipmap.ic_buy, R.mipmap.ic_myself};
+            .ic_myself_normal}; //未选中图标
+    private int[] mIconSelectIds = {R.mipmap.ic_rank, R.mipmap.ic_taxation, R.mipmap.ic_buy, R.mipmap.ic_myself}; //选中图标
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private ArrayList<Fragment> mFragments = new ArrayList<>();
 
@@ -52,7 +52,8 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setTitle("高手排行");
+        setTitle("高手排行"); //默认显示高手排行
+        //设置状态栏颜色
         StatusBarUtil.setColorNoTranslucent(HomeActivity.this, ContextCompat.getColor(HomeActivity.this, R.color.blue));
         //添加标题 已选图标 未选图标
         for (int i = 0; i < mTitles.length; i++) {
@@ -112,12 +113,17 @@ public class HomeActivity extends BaseActivity {
             }
 
             @Override
-            public void onTabReselect(int position) {
+            public void onTabReselect(int position) { //重复点击执行
 
             }
         });
     }
 
+    /**
+     * 报单界面的点击事件
+     *
+     * @param v
+     */
     @OnClick({R.id.ll_taxation, R.id.ll_futures, R.id.rb_taxation, R.id.rb_futures})
     void onClick(View v) {
         switch (v.getId()) {
