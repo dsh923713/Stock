@@ -123,8 +123,8 @@ public class DateUtil {
      * 转换时间戳为时分
      */
     public static String toTime2(String str) {
-        long time = Long.parseLong(str) * 1000;
-        SimpleDateFormat format1 = new SimpleDateFormat("kk:mm");
+        long time = Long.parseLong(str);
+        SimpleDateFormat format1 = new SimpleDateFormat("HH:mm");
         Date d = new Date(time);
         String t1 = format1.format(d);
         return t1;

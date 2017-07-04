@@ -16,7 +16,7 @@ import java.util.List;
 
 public class TaxationFuturesAdapter extends BaseQuickAdapter<TaxationFuturesBean, BaseViewHolder> {
     public TaxationFuturesAdapter(@Nullable List<TaxationFuturesBean> data) {
-        super(R.layout.rv_taxation_futures, data);
+        super(R.layout.rv_item_taxation_futures, data);
     }
 
     @Override

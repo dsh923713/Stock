@@ -53,7 +53,9 @@
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/tv_buy"
             android:layout_toRightOf="@id/riv_head"
-            android:text="的双龙大道是的撒"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="的双龙大道是的撒颠三倒四胜多负少的啥地方的撒范德萨发"
             android:textColor="@color/white"
             android:textSize="12dp"/>
 

@@ -9,6 +9,8 @@ import android.widget.TextView;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.zmq.stock.R;
 import com.zmq.stock.base.BaseActivity;
+import com.zmq.stock.fragment.DirectPlayFragment;
+import com.zmq.stock.fragment.InquireFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -35,6 +37,8 @@ public class PersonInformationActivity extends BaseActivity {
     RadioButton rbPlay; //直播
     @BindView(R.id.rb_inquire)
     RadioButton rbInquire; //问答
+    private DirectPlayFragment directPlayFragment;
+    private InquireFragment inquireFragment;
 
     public PersonInformationActivity() {
         super(R.layout.activity_person_information);
@@ -54,9 +58,12 @@ public class PersonInformationActivity extends BaseActivity {
 
             }
         });
+        directPlayFragment = new DirectPlayFragment();
+        inquireFragment = new InquireFragment();
+        replaceFragment(R.id.fl_content, DirectPlayFragment.getInstance());//默认显示直播
     }
 
-    @OnClick({R.id.tv_follow,R.id.rb_play, R.id.rb_inquire})
+    @OnClick({R.id.tv_follow, R.id.rb_play, R.id.rb_inquire})
     void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_follow:
@@ -67,12 +74,14 @@ public class PersonInformationActivity extends BaseActivity {
                 rbPlay.setCompoundDrawables(null, null, null, getDrawable());
                 rbInquire.setCompoundDrawables(null, null, null, null);
                 rbInquire.setTextColor(ContextCompat.getColor(this, R.color.gary));
+                replaceFragment(R.id.fl_content, DirectPlayFragment.getInstance());
                 break;
             case R.id.rb_inquire:
                 rbInquire.setTextColor(ContextCompat.getColor(this, R.color.blue));
                 rbInquire.setCompoundDrawables(null, null, null, getDrawable());
                 rbPlay.setCompoundDrawables(null, null, null, null);
                 rbPlay.setTextColor(ContextCompat.getColor(this, R.color.gary));
+                replaceFragment(R.id.fl_content, inquireFragment);
                 break;
             default:
                 break;
