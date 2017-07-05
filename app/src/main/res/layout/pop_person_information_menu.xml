@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zmq.stock.widget.ArrowRectangleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:splitMotionEvents="false"
+    app:arrow_height="8dp"
+    app:arrow_offset="31dp"
+    app:arrow_width="16dp"
+    app:background_color="@color/t313131"
+    app:radius="3dp"
+    app:shadow_color="@color/transparent"
+    app:shadow_thickness="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_shape"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:text="@string/shape"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_price"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:text="@string/price"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/line_color"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</com.zmq.stock.widget.ArrowRectangleView>

@@ -147,7 +147,7 @@ public class TaxationFuturesFragment extends BaseFragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() < 1){
+                if (s.length() < 1) {
                     etPrice.setText("0.00");
                 }
             }
@@ -169,6 +169,13 @@ public class TaxationFuturesFragment extends BaseFragment {
         mData.add(new TaxationFuturesBean("石油167", 52674l, 322l, 12344l));
         mData.add(new TaxationFuturesBean("天然气851", 5824l, 77l, 68214l));
         mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
+        mData.add(new TaxationFuturesBean("煤矿433", 63434l, -92l, 45114l));
     }
 
     /**
@@ -185,16 +192,16 @@ public class TaxationFuturesFragment extends BaseFragment {
                 showShortToast(etFuturesName.getText().toString());
                 break;
             case R.id.ib_subtract: //减
-                if (price < 1) {
+                if (price < 0.01) {
                     price = 0;
                 } else {
-                    price--;
+                    price -= 0.01;
                 }
                 etPrice.setText(String.format("%.2f", price) + "");
                 etPrice.setSelection(etPrice.length());
                 break;
             case R.id.ib_add: //加
-                price++;
+                price += 0.01;
                 etPrice.setText(String.format("%.2f", price) + "");
                 etPrice.setSelection(etPrice.length());
                 break;
@@ -247,7 +254,7 @@ public class TaxationFuturesFragment extends BaseFragment {
                 cbOneHalf.setChecked(false);
                 break;
             case R.id.tv_sure: //确定
-                showShortToast(direction + "---" + shipSpace);
+                showShortToast(direction + "---" + shipSpace +"---"+price);
                 break;
             default:
                 break;

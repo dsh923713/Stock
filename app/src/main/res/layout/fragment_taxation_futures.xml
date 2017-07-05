@@ -59,9 +59,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_futures"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:nestedScrollingEnabled="false"/>
+            android:layout_height="150dp"
+            android:background="@color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"

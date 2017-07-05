@@ -2,6 +2,7 @@ package com.zmq.stock.activity;
 
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import com.zmq.stock.R;
 import com.zmq.stock.base.BaseActivity;
 import com.zmq.stock.fragment.DirectPlayFragment;
 import com.zmq.stock.fragment.InquireFragment;
+import com.zmq.stock.widget.CustomPopWindow;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -55,7 +57,7 @@ public class PersonInformationActivity extends BaseActivity {
         setRightIcon(R.mipmap.ic_more, "", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                setPopupWindow();
             }
         });
         directPlayFragment = new DirectPlayFragment();
@@ -92,5 +94,47 @@ public class PersonInformationActivity extends BaseActivity {
         Drawable drawable = ContextCompat.getDrawable(this, R.mipmap.ic_line);
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         return drawable;
+    }
+
+    private CustomPopWindow mCustomPopWindow;//顶部更多弹窗
+
+    private void setPopupWindow() {
+        View view = LayoutInflater.from(this).inflate(R.layout.pop_person_information_menu, null);
+        //处理popWindow 显示内容及点击事件
+        handleLogic(view);
+        //创建并显示popupwindow
+        mCustomPopWindow = new CustomPopWindow.PopupWindowBuilder(this).setView(view).create().showAsDropDown(tv_right, 0, 20);
+    }
+
+    /**
+     * 处理弹出显示内容、点击事件等逻辑
+     *
+     * @param contentView
+     */
+    private void handleLogic(View contentView) {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mCustomPopWindow != null) {
+                    mCustomPopWindow.dissmiss();
+                }
+                switch (v.getId()) {
+                    case R.id.tv_shape: //分享
+                        showShortToast("分享");
+                        break;
+                    case R.id.tv_price: //
+                        showShortToast("价格");
+                        break;
+                    case R.id.tv_search: //搜索
+                        showShortToast("搜索");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
+        contentView.findViewById(R.id.tv_shape).setOnClickListener(listener);
+        contentView.findViewById(R.id.tv_price).setOnClickListener(listener);
+        contentView.findViewById(R.id.tv_search).setOnClickListener(listener);
     }
 }

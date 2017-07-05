@@ -146,16 +146,16 @@ public class TaxationItemFragment extends BaseFragment {
                 showShortToast(etStockCode.getText().toString());
                 break;
             case R.id.ib_subtract: //减
-                if (price < 1) {
+                if (price < 0.01) {
                     price = 0;
                 } else {
-                    price--;
+                    price -= 0.01;
                 }
                 etPrice.setText(String.format("%.2f", price) + "");
                 etPrice.setSelection(etPrice.length());
                 break;
             case R.id.ib_add: //加
-                price++;
+                price += 0.01;
                 etPrice.setText(String.format("%.2f", price) + "");
                 etPrice.setSelection(etPrice.length());
                 break;
@@ -202,7 +202,7 @@ public class TaxationItemFragment extends BaseFragment {
                 cbOneHalf.setChecked(false);
                 break;
             case R.id.tv_sure: //确定
-                showShortToast(shipSpace);
+                showShortToast(shipSpace +"---"+ price);
                 break;
             default:
                 break;
