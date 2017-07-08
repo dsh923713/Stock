@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_inquire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/inquiry_white_shape"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="5dp"
+            android:hint="@string/inquire_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_lite"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_inquire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inquiry_blue_shape"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/inquire"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_inquire"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_not_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/not_inquire_with_you"
+                android:textColor="@color/t313131"
+                android:textSize="13sp"/>
+
+            <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                app:sLeftTextColor="@color/black"
+                app:sLeftTextMarginLeft="10dp"
+                app:sLeftTextSize="13sp"
+                app:sLeftTextString="@string/today_all_inquire"
+                app:sRightTextColor="@color/gary"
+                app:sRightTextMarginRight="10dp"
+                app:sRightTextSize="11sp"
+                app:sRightTextString="@string/answer_hint"
+                app:sUseRipple="false"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_inquire"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

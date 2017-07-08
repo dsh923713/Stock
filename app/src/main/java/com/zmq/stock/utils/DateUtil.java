@@ -76,6 +76,8 @@ public class DateUtil {
      */
     public static final String DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
+    public static final String DATE_TIME_FORMAT = "MM-dd HH:mm";
+
     /**
      * 解析json数据
      *
@@ -211,6 +213,18 @@ public class DateUtil {
      */
     public static String toTime9(Long time) {
         SimpleDateFormat format = new SimpleDateFormat(HOUR_FORMAT);
+        Date d = new Date(time);
+        String t = format.format(d);
+        return t;
+    }
+
+    /**
+     * 转换时间戳为00:00:00<br>
+     *
+     * @return
+     */
+    public static String toTime10(Long time) {
+        SimpleDateFormat format = new SimpleDateFormat(DATE_TIME_FORMAT);
         Date d = new Date(time);
         String t = format.format(d);
         return t;

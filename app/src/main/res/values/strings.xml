@@ -43,4 +43,9 @@
     <string name="follow">+关注</string>
     <string name="warm_hint">温馨提示：所有直播内容仅代表播主个人观点，不构成任何投资建议。</string>
     <string name="shape">分享</string>
+    <string name="inquire">提问</string>
+    <string name="inquire_hint">输入股票简称/代码+问题</string>
+    <string name="not_inquire_with_you">您还没有提问，赶紧问一个～</string>
+    <string name="today_all_inquire">今日所有问答</string>
+    <string name="answer_hint">解答仅供参考，不作为投资建议</string>
 </resources>

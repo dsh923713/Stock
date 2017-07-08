@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dp"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_inquire_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="德赛电池打的费"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_inquire_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="132****4224　07-08 15:55"
+        android:textColor="@color/gary"
+        android:textSize="11sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey"
+        android:padding="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/xiaohei"
+            app:riv_oval="true"/>
+
+        <TextView
+            android:id="@+id/tv_answer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/riv_icon"
+            android:text="滴水石穿"
+            android:textColor="@color/blue"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_answer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_answer_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/riv_icon"
+            android:text="07-08 15:56"
+            android:textColor="@color/gary"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_answer_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_answer_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/riv_icon"
+            android:text="都是垃圾打扫房间当练手放假啊"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+</LinearLayout>

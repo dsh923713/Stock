@@ -63,6 +63,9 @@ public class DirectPlayFragment extends BaseFragment {
         mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
         mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
         mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
+        mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
+        mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
+        mData.add(new DirectPlayBean(System.currentTimeMillis() + "", "啥啥地方的撒范德萨发的是发生的发生的范德萨发生的发胜多负少的方式大幅度送达方式的方式发生的的方式的放大"));
     }
 
 }
