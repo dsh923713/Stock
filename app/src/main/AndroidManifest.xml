@@ -27,12 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.PersonInformationActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait"/>
-
-
         <!--相册-->
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"

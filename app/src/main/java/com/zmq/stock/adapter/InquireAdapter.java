@@ -2,8 +2,6 @@ package com.zmq.stock.adapter;
 
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -13,19 +11,12 @@ import com.zmq.stock.utils.DateUtil;
 
 import java.util.List;
 
-import butterknife.BindView;
-
 /**
+ * 问答适配器
  * Created by Administrator on 2017/7/8.
  */
 
 public class InquireAdapter extends BaseQuickAdapter<InquireBean, BaseViewHolder> {
-    @BindView(R.id.tv_inquire_time)
-    TextView tvInquireTime;
-    @BindView(R.id.tv_answer_time)
-    TextView tvAnswerTime;
-    @BindView(R.id.rl_answer)
-    RelativeLayout rlAnswer;
 
     public InquireAdapter(@Nullable List<InquireBean> data) {
         super(R.layout.rv_item_inquire, data);
