@@ -1,2 +1,2 @@
-include ':app', ':mallLibrary'
-project(':mallLibrary').projectDir = new File('ShopMall/app')
+include ':app', ':library'
+project(':library').projectDir = new File('E:/ShopMall/app')
