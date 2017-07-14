@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':mallLibrary'
+project(':mallLibrary').projectDir = new File('ShopMall/app')

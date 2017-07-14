@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.allen.library.SuperTextView;
 import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
+import com.zmq.shopmall.activity.HomeActivity;
 import com.zmq.stock.R;
 import com.zmq.stock.base.BaseFragment;
 
@@ -99,6 +100,7 @@ public class MyselfFragment extends BaseFragment {
             case R.id.stv_prize: //推荐有奖
                 break;
             case R.id.stv_integral_mall: //积分商城
+                startActivity(HomeActivity.class);
                 break;
             case R.id.stv_service: //服务中心
                 break;

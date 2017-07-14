@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.github.nuptboyzhb.lib.SuperSwipeRefreshLayout;
 import com.zmq.stock.R;
+import com.zmq.stock.activity.PersonInformationActivity;
 import com.zmq.stock.adapter.SuperiorRankAdapter;
 import com.zmq.stock.base.BaseFragment;
 import com.zmq.stock.bean.SuperiorRankBean;
@@ -72,7 +73,7 @@ public class AlreadyBuyFragment extends BaseFragment implements SuperSwipeRefres
         rankAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-
+                startActivity(PersonInformationActivity.class);
             }
         });
     }

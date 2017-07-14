@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/delivery"
+                    android:textColor="@color/t313131"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_delivery_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/ic_location_red_library"
+                    android:drawablePadding="3dp"
+                    android:text="@string/cp_select_city"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <!--<com.google.android.flexbox.FlexboxLayout-->
+            <!--android:id="@+id/rg_task_group"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:alignItems="stretch"-->
+            <!--app:flexDirection="row"-->
+            <!--app:flexWrap="wrap"-->
+            <!--app:justifyContent="flex_start">-->
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/cb_task_total"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/select_check_red_to_white_library"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="item1"-->
+            <!--android:textColor="@color/black"/>-->
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/cb_assigning"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/select_check_red_to_white_library"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="item2"-->
+            <!--android:textColor="@color/black"/>-->
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/cb_no_assigning"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/select_check_red_to_white_library"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="item3"-->
+            <!--android:textColor="@color/black"/>-->
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/cb_item4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/select_check_red_to_white_library"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="item4"-->
+            <!--android:textColor="@color/black"/>-->
+            <!--</com.google.android.flexbox.FlexboxLayout>-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_filtrate_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/price_section"
+                android:textColor="@color/t313131"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/et_low_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_hot_search_grey_library"
+                    android:gravity="center"
+                    android:hint="最低价"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="6dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gary"
+                    android:textSize="12sp"/>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@color/gary"/>
+
+                <EditText
+                    android:id="@+id/et_height_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_hot_search_grey_library"
+                    android:gravity="center"
+                    android:hint="最高价"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="6dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gary"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_price_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_price_select1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_check_red_to_white_library"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="12-30 \n 32%选择"
+                    android:textColor="@color/black_to_red_library"
+                    android:textSize="9sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_price_select2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_check_red_to_white_library"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="31-60 \n 32%选择"
+                    android:textColor="@color/black_to_red_library"
+                    android:textSize="9sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_price_select3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_check_red_to_white_library"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="61-110 \n 26%选择"
+                    android:textColor="@color/black_to_red_library"
+                    android:textSize="9sp"/>
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_all_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="全部分类"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/ic_right_library"
+                    android:text="全部"
+                    android:textColor="@color/t666666"
+                    android:textSize="13sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="重置"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="确定"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>
